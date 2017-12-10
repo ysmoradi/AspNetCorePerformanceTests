@@ -18,7 +18,7 @@ namespace AspNetCorePerformanceTests
 
             routeBuilder.MapGet("api/values/{id}", context =>
             {
-                return context.Response.WriteAsync("value");
+                return context.Response.WriteAsync((string)context.GetRouteValue("id"));
             });
 
             IRouter routes = routeBuilder.Build();

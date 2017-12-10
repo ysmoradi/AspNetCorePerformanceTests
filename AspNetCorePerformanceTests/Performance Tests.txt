@@ -1,0 +1,9 @@
+﻿Req/Sec
+
+Windows 10-16299-X64 | Core i 7 7700K
+
+144/000 >> .NET Core | ASP.NET Core | X64 Release Production
+174/000 >> Go | IRIS
+015/850 >> Node JS 8 X64
+
+bombardier -c 125 -n 5000000 http://localhost:5000/api/values/5

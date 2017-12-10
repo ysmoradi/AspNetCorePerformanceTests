@@ -1,0 +1,7 @@
+{
+  "name": "node",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
