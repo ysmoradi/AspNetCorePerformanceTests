@@ -10,6 +10,10 @@ namespace AspNetCorePerformanceTests
         {
             IWebHost host = new WebHostBuilder()
                 .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseKestrel(options =>
+                {
+                    options.AddServerHeader = false;
+                })
                 .UseStartup<Startup>()
                 .Build();
 
