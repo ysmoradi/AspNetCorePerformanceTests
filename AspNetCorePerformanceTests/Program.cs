@@ -1,19 +1,19 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace AspNetCorePerformanceTests
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             IWebHost host = new WebHostBuilder()
-                .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
                 .Build();
 
-            host.Run();
+            await host.RunAsync();
         }
     }
 }
